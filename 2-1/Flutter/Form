@@ -1,0 +1,143 @@
+//@dart=2.9
+import 'package:flutter/material.dart';
+
+void main()
+{
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget
+{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+
+        title: "Form Data",
+        home:Scaffold(
+            appBar: AppBar
+              (
+                title: Text("Form Example"),
+              ),
+            body: MyCustomForm(),
+        )
+    );
+  }
+
+}
+
+class MyCustomForm extends StatefulWidget
+{
+  @override
+  _MyCustomFormState createState() => _MyCustomFormState();
+
+
+}
+
+class _MyCustomFormState extends State<MyCustomForm>
+{
+    final _formkey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context)
+  {
+
+    return Form
+      (
+        key:_formkey,
+        child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+
+                            TextFormField(
+
+                              decoration: InputDecoration(
+
+                                  icon:Icon(Icons.person),
+                                  hintText: "Enter Your Full Name",
+                                  labelText: "Name",
+
+                              ),
+                              validator: (value)
+                              {
+                                  if(value.isEmpty)
+                                    {
+                                      return 'Please Enter Your Name';
+                                    }
+                                  return null;
+                              },
+
+
+
+                            ),
+                          TextFormField(
+
+                            decoration: InputDecoration(
+
+                              icon:Icon(Icons.phone),
+                              hintText: "Enter Your Number",
+                              labelText: "Number",
+
+                            ),
+                            validator: (value)
+                            {
+                              if(value.isEmpty)
+                              {
+                                return 'Please Enter Your Number';
+                              }
+                              return null;
+                            },
+
+
+
+                          ),
+
+                          TextFormField(
+
+                            decoration: InputDecoration(
+
+                              icon:Icon(Icons.email),
+                              hintText: "Enter Your Email",
+                              labelText: "Email",
+
+                            ),
+                            validator: (value)
+                            {
+                              if(value.isEmpty)
+                              {
+                                return 'Please Enter Your Email';
+                              }
+                              return null;
+                            },
+
+
+                          ),
+                          new Container(
+
+                              padding:const EdgeInsets.only(left :150.0, top:40.0),
+                              child:ElevatedButton(
+
+                                  child: Text('Submit'),
+                                  onPressed: ()
+                                  {
+
+                                      if(_formkey.currentState.validate())
+                                        {
+                                          //ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Success')));
+                                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Success')));
+                                        }
+
+                                  },
+
+                              )
+
+
+                          )
+
+
+                        ],
+                      )
+    );
+
+  }
+
+}
