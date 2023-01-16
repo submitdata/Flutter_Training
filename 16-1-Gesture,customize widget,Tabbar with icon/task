@@ -1,0 +1,14 @@
+Take a splash screen (using lottiee animation)
+
+1)Take a two tabs with the name of 
+->CALL and CAMERA
+
+->in CALL Tab there is a 3 numbers are there in listview
+->you have to call on this number according to position
+
+
+->in another tab you have to take camera symbol whenever you will
+click on that camera is open and captured image will be show in imageview
+
+
+
