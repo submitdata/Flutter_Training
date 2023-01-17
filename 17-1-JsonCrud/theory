@@ -1,0 +1,33 @@
+SQL queries
+
+JSON->JavaScript Object Notation
+=>Json is a one data interchanging format
+
+
+database ->table->Multiple Data ->
+
+
+[]->JsonArray
+{}->JsonObject
+
+CRUD operations
+
+
+API ->Application programming interface->
+
+GET
+POST->More Secure
+
+Insert,View,Update,Delete
+
+1)
+Online Database with Mysql and JSON Format
+Splash Screen->Login->Register->Inventory Management
+->Mobile Prodcust Add
+->View
+->Update
+->Delete
+
+2)Cloud Database-Firebase
+
+
